@@ -1,0 +1,132 @@
+/* Modern slide-down animation */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.loginsignup {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #93a5cf, #e4efe9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centralized container for the login/signup form */
+.loginsignup-container {
+    width: 600px; /* Increased width */
+    background-color: #fff;
+    padding: 60px 50px; /* More padding for spacing */
+    border-radius: 16px; /* Slightly larger radius for softer edges */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Deeper shadow for emphasis */
+    text-align: center;
+    animation: slideDown 0.6s ease-out;
+    position: relative;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+/* Header Styling */
+.loginsignup-container h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px; /* Larger text for the title */
+    font-weight: 700; /* Bold title */
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Form fields structure */
+.loginsignup-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Form input field styles */
+.loginsignup-fields input {
+    height: 55px; /* Taller input fields */
+    width: 100%;
+    padding: 0 20px;
+    border: 1px solid #ccc; /* Softer border */
+    color: #333;
+    font-size: 18px; /* Larger text for inputs */
+    border-radius: 10px; /* Larger border radius */
+    background-color: #f5f5f5; /* Slightly lighter background */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus state for form inputs */
+.loginsignup-fields input:focus {
+    border-color: #1976D2;
+    outline: none;
+    box-shadow: 0 0 10px rgba(25, 118, 210, 0.25);
+}
+
+/* Button styling for submit */
+.loginsignup-container button {
+    width: 100%;
+    height: 55px; /* Larger button */
+    background-color: #1976D2;
+    color: #fff;
+    font-size: 20px; /* Larger button text */
+    font-weight: 600;
+    border: none;
+    border-radius: 10px; /* Rounded button */
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 10px 20px rgba(25, 118, 210, 0.4); /* Stronger shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover effect */
+.loginsignup-container button:hover {
+    background-color: #0d47a1;
+    box-shadow: 0 15px 30px rgba(13, 71, 161, 0.4);
+}
+
+/* Toggle text styling */
+.loginsignup-toggle {
+    margin-top: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    font-size: 18px; /* Larger toggle text */
+    font-weight: 500;
+}
+
+/* Link styling for login/signup switch */
+.loginsignup-toggle span {
+    color: #1976D2;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect on link */
+.loginsignup-toggle span:hover {
+    color: #0d47a1;
+}
+
+/* Terms and Conditions Checkbox */
+.loginsignup-agree {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    color: #555;
+    font-size: 16px; /* Larger checkbox text */
+}
+
+.loginsignup-agree input {
+    margin-right: 12px;
+}
+
+/* Enhanced shadows and smooth transitions */
+.loginsignup-container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}

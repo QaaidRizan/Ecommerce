@@ -1,0 +1,245 @@
+.place-order-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.place-order {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    gap: 50px;
+}
+
+.place-order-left {
+    width: 60%;
+}
+
+.place-order-left .title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.order-item-row {
+    display: grid;
+    grid-template-columns: 20% 75%; /* Default: 20% for label, 75% for input */
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Title and Price Row - default */
+.order-item-row label {
+    font-size: 16px;
+    text-align: left;
+}
+
+.order-item-row input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Quantity row: make the input take the full width */
+.order-item-row.quantity-row {
+    display: grid;
+    grid-template-columns: 100%; /* Quantity will take full width */
+}
+
+.order-item-row.quantity-row label,
+.order-item-row.quantity-row input {
+    width: 50%;
+}
+
+.order-item-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 10px;
+    width: 40%;
+}
+
+.update-button, .delete-button {
+    width: 45%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+
+.update-button {
+    background-color: #4caf50;
+}
+
+.delete-button {
+    background-color: #f44336;
+}
+
+.update-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+}
+
+.place-order-right {
+    width: 35%;
+    border: 1px solid #e1e1e1;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+.cart-total h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.cart-total-details p, .cart-total-details b {
+    font-size: 18px;
+    margin: 0;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #0f0c0c;
+    margin: 15px 0;
+}
+
+.proceed-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #ff6347;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.proceed-to-payment button {
+    width: 100%;
+    padding: 16px;
+    background-color: #e60000; /* Red background */
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.proceed-to-payment button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+@media (max-width: 900px) {
+  .place-order {
+    flex-direction: column;
+    width: 98%;
+    gap: 30px;
+  }
+  .place-order-left,
+  .place-order-right {
+    width: 100%;
+  }
+  .order-item-actions {
+    width: 60%;
+  }
+  .place-order-container {
+    margin-top: 30px;
+  }
+  .place-order-left .title {
+    font-size: 24px;
+  }
+  .cart-total h2 {
+    font-size: 20px;
+  }
+  .cart-total-details p,
+  .cart-total-details b {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .place-order {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    padding: 0 4px;
+  }
+  .place-order-left,
+  .place-order-right {
+    width: 100%;
+    padding: 0;
+  }
+  .place-order-right {
+    border: none;
+    padding: 8px 0;
+  }
+  .place-order-container {
+    margin-top: 10px;
+  }
+  .place-order-left .title {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  .order-item-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .order-item-row label,
+  .order-item-row input {
+    font-size: 13px;
+    width: 100%;
+  }
+  .order-item-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .update-button,
+  .delete-button {
+    width: 100%;
+    padding: 8px;
+    font-size: 13px;
+  }
+  .cart-total h2 {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .cart-total-details {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .cart-total-details p,
+  .cart-total-details b {
+    font-size: 12px;
+  }
+  .proceed-button,
+  .proceed-to-payment button {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  hr {
+    margin: 8px 0;
+    height: 1px;
+  }
+}
