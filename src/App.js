@@ -6,7 +6,6 @@ import ShopCategory from './Pages/ShopCategory';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import LoginSignup from './Pages/LoginSignup';
-import Footer from './Components/Footer/Footer';
 import men_banner from './Components/Assets/banner_mens.png';
 import women_banner from './Components/Assets/banner_women.png';
 import kids_banner from './Components/Assets/banner_kids.png';
@@ -29,7 +28,6 @@ function App() {
                     <Route path='/login' element={<LoginSignup formType="login" />} />
                     <Route path='/orders' element={<PlaceOrder />} />
                 </Routes>
-                <Footer />
             </BrowserRouter>
         </div>
     );
